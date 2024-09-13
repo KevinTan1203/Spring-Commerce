@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base::html(~{::title}, ~{::content}, ~{}, ~{})}">
+
+<head>
+	<title>Fashion Saga</title>
+	<!-- Bootstrap CSS for styling -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style>
+		/* Custom style to set the max height of the image */
+		#fashion-img {
+				max-height: 200px; /* Adjust this value as needed */
+				object-fit: cover; /* Maintain aspect ratio while cropping */
+		}
+</style>
+</head>
+
+<body>
+	<th:block th:fragment="content">
+		<div class="container mt-5">
+			<!-- Title Section -->
+			<h2 class="display-4 text-center mb-4">Contact Us</h2>
+			<p class="lead text-center mb-5">We value your feedback!</p>
+
+			<!-- Image Section -->
+			<div class="text-center mb-5">
+				<img id="fashion-img" src="fashion-contact.jpg" alt="Fashion Image" class="img-fluid rounded shadow-lg">
+			</div>
+
+			<!-- Description Section -->
+			<p class="text-muted mb-4">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, nobis assumenda. Ad inventore asperiores
+				ipsam consequuntur nesciunt quod sit temporibus blanditiis soluta eum. Omnis unde in, facilis quam modi ullam!
+			</p>
+
+			<!-- Contact Form Section -->
+			<form>
+				<div class="row">
+					<!-- Name Field -->
+					<div class="col-md-6">
+						<div class="form-group position-relative">
+							<label for="name" class="font-weight-bold">Your Name</label>
+							<input type="text" class="form-control pl-5" id="name" placeholder="Enter your name">
+							<i class="fas fa-user position-absolute" style="top: 38px; left: 10px;"></i>
+						</div>
+					</div>
+
+					<!-- Email Field -->
+					<div class="col-md-6">
+						<div class="form-group position-relative">
+							<label for="email" class="font-weight-bold">Your Email</label>
+							<input type="email" class="form-control pl-5" id="email" placeholder="Enter your email">
+							<i class="fas fa-envelope position-absolute" style="top: 38px; left: 10px;"></i>
+						</div>
+					</div>
+				</div>
+
+				<!-- Submit Button -->
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary btn-lg mt-3">Submit</button>
+				</div>
+			</form>
+		</div>
+	</th:block>
+
+	<!-- Bootstrap JS and FontAwesome for icons -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
